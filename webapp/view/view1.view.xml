@@ -1,0 +1,33 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="wipro.controller.view1"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="View1">
+		<!--<content>
+						<Button text="Next" press="onNext"> </Button>
+				</content>-->
+		<headerContent>
+			<Button icon="sap-icon://navigation-right-arrow" press="onNext"></Button>
+		</headerContent>
+		<SearchField id="idSearch" width="90%" search="onSearch" class="sapUiSmallMargin"/>
+		<List id="idList" headerText="Products Catalogue"
+			items="{ path: '/ProductSet'}"
+			itemPress="onItemPress" mode="SingleSelectMaster" select="onSelect" growingThreshold="10" growing="true">
+			<!--	// itemPress="onItemPress"	commented this from list control-->
+			<items>
+				<ObjectListItem intro="{CATEGORY}" title="{PRODUCT_ID}" icon="sap-icon://product" type="Active" press="onListItemPress" number="{PRICE}"
+					numberUnit="{CURRENCY_CODE}">
+				<!--	<firstStatus>
+						<ObjectStatus text="{status}" state="{ path: 'status', formatter: '.formatter.status' }"/>
+					</firstStatus>-->
+					<!--	<ObjectAttribute text="healthBenefit"/>-->
+					<!--	<ObjectAttribute text="10 x 3 x 15 cm"/>-->
+				</ObjectListItem>
+			</items>
+		</List>
+		<footer>
+			<OverflowToolbar>
+				<Button text="Launch" press="onLaunch"> </Button>
+				<Button text="Add" press="onCreate" icon="sap-icon://add"> </Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

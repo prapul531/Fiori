@@ -1,0 +1,11 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="wipro.controller.App"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<SplitApp id="idAppCont">
+	
+				
+		<!--	<mvc:XMLView viewName="wipro.fiori.view.first"/>	
+			<mvc:XMLView viewName="wipro.fiori.view.second"/>	-->
+		
+	
+	</SplitApp>
+</mvc:View>

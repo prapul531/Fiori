@@ -1,0 +1,43 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	controllerName="wipro.controller.create" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Create Product">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				<f:SimpleForm id="SimpleFormDisplay354" editable="true" layout="ResponsiveGridLayout" title="Address" labelSpanXL="3" labelSpanL="3"
+					labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+					columnsL="1" columnsM="1" singleContainerFullSize="false">
+					<f:content>
+						<Label text="Product Id"/>
+						<Input id="idProductId" value="{local>/product/PRODUCT_ID}"/>
+							<Label text="Name"/>
+						<Input  value="{local>/product/NAME}"/>
+							<Label text="DESCRIPTION"/>
+						<Input  value="{local>/product/DESCRIPTION}"/>
+						<Label text="Price/Currency"/>
+						<Input value="{local>/product/PRICE}"></Input>
+						<Input value="{local>/product/CURRENCY_CODE}">
+							<layoutData>
+								<l:GridData span="XL2 L1 M3 S4"/>
+							</layoutData>
+						</Input>
+						<Label text="Supplier Id"/>
+						<Input id="idSupInput" value="{local>/product/SUPPLIER_ID}" valueHelpOnly="true" showValueHelp="true" valueHelpRequest="onSupHelp"/>
+							
+						
+					<Input  id="idSupName" editable="false"/>
+							
+				
+						
+						
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="Save" icon="sap-icon://save" press="onSave"> </Button>
+				</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

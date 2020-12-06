@@ -1,0 +1,17 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form"
+	controllerName="wipro.controller.supDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Supplier Details">
+		<content>
+			<Panel headerText="{i18n>panel4HeaderText}" class="sapUiResponsiveMargin" width="auto">
+				<form:SimpleForm editable="true" layout="ColumnLayout" id="idForm">
+					<form:content>
+						<Label text="Name"/>
+						<Input value="{name}"/>
+						<Label text="City"/>
+						<Input value="{city}"/>
+					</form:content>
+				</form:SimpleForm>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>

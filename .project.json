@@ -1,0 +1,38 @@
+{
+	"generation": [{
+		"templateId": "ui5template.basicSAPUI5ApplicationComponent",
+		"templateVersion": "1.4.0",
+		"dateTimeStamp": "Wed, 18 Nov 2020 11:15:13 GMT"
+	}, {
+		"templateId": "servicecatalog.connectivityComponent",
+		"templateVersion": "0.0.0",
+		"dateTimeStamp": "Thu, 05 Nov 2020 16:03:27 GMT"
+	}],
+	"mockpreview": {
+		"mockUri": "/sap/opu/odata/sap/ZPAP_PRODUCTS_SRV/",
+		"metadataFilePath": "localService/metadata.xml",
+		"loadJSONFiles": false,
+		"loadCustomRequests": false,
+		"mockRequestsFilePath": ""
+	},
+	"deploy": {
+		"destination": "HS4",
+		"name": "zpap_first"
+	},
+	"build": {
+		"buildRequired": true,
+		"sourceFolder": "webapp",
+		"targetFolder": "destination",
+		"excludedFolders": [],
+		"excludedFiles": [],
+		"lastBuildDateTime": ""
+
+	},
+	"translation": {
+		"translationDomain": "",
+		"supportedLanguages": "",
+		"defaultLanguage": "",
+		"defaultI18NPropertyFile": "",
+		"resourceModelName": ""
+	}
+}

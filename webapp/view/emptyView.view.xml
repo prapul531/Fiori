@@ -1,0 +1,12 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="wipro..controller.emptyView"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Welcome to Fruits Store">
+				<content>
+					<Label text="Please select a fruit"> </Label>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

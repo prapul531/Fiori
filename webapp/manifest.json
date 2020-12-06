@@ -1,0 +1,200 @@
+{
+	"_vesrion:": "1.9.0",
+	"sap.app": {
+		"id": "wipro",
+		"version": "1.9.0",
+		"type": "application",
+		"_version": "1.3.0",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{applicationTitle}}",
+		"description": "{{applicationDescription}}",
+		"tags": {
+			"keywords": [
+				"{{tag1}}",
+				"{{tag2}}"
+			]
+		},
+		"ach": "WIPRO",
+		"dataSources": {
+			"ZPAP_PRODUCTS_SRV": {
+				"uri": "/sap/opu/odata/sap/ZPAP_PRODUCTS_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"dependencies": {
+			"minUI5Version": "1.56.10",
+			"libs": {
+				"sap.ui.layout": {
+					"minVersion": ""
+				},
+				"sap.m": {
+					"minVersion": ""
+				}
+			}
+		},
+		"rootView": {
+			"viewName": "wipro.view.App",
+			"type": "XML"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "wipro.view",
+				"controlId": "idAppCont"
+			},
+			"routes": [
+				{
+					"name": "detail1",
+					"pattern": "",
+					"titleTarget": "initialRoute",
+					"greedy": false,
+					"target": [
+						"master",
+						"defaultDetail"
+					]
+				},
+				{
+					"name": "detail",
+					"pattern": "productDetail/{productId}",
+					"titleTarget": "detailRoute",
+					"greedy": false,
+					"target": [
+						"master",
+						"detail1"
+					]
+				},
+				{
+					"name": "supDetail",
+					"pattern": "supDetail/{supIndex}",
+					"titleTarget": "supDetail",
+					"greedy": false,
+					"target": [
+						"detail1",
+						"supDetail"
+					]
+				},
+				{
+					"name": "create",
+					"pattern": "newproduct",
+					"titleTarget": "create",
+					"greedy": false,
+					"target": [
+						"master",
+						"create"
+					]
+				}
+			],
+			"targets": {
+				"detail1": {
+					"viewType": "XML",
+					"transition": "flip",
+					"clearAggregation": true,
+					"viewName": "view2",
+					"viewLevel": 2,
+					"controlAggregation": "detailPages",
+					"viewId": "idView2"
+				},
+				"master": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "view1",
+					"viewId": "idView1",
+					"controlAggregation": "masterPages"
+				},
+				"defaultDetail": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "emptyView",
+					"viewId": "idEmptyView",
+					"controlAggregation": "detailPages",
+					"viewLevel": 1
+				},
+				"supDetail": {
+					"viewType": "XML",
+					"transition": "flip",
+					"clearAggregation": true,
+					"viewName": "supDetail",
+					"viewLevel": 3,
+					"controlAggregation": "detailPages",
+					"viewId": "idViewSup"
+				},
+				"create": {
+					"viewType": "XML",
+					"transition": "flip",
+					"clearAggregation": true,
+					"viewName": "create",
+					"controlAggregation": "detailPages",
+					"viewId": "idCreate",
+					"viewLevel": 1
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "style/mystyle.css",
+					"id": ""
+				}
+			]
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {},
+				"uri": "i18n/i18n.properties",
+				"preload": true,
+				"async": true
+			},
+			"fruits": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/mockdata/fruitsfile.json",
+				"preload": true
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {},
+				"dataSource": "ZPAP_PRODUCTS_SRV",
+				"preload": true
+			}
+		}
+	},
+	"_version": "1.9.0",
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zpap_first/webapp",
+		"_version": "1.1.0"
+	}
+}

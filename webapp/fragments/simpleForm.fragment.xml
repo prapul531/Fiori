@@ -1,0 +1,18 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form">
+	<Panel headerText="{i18n>panel4HeaderText}" class="sapUiResponsiveMargin" width="auto">
+		<form:SimpleForm editable="true" layout="ColumnLayout" id="idForm">
+			<form:content>
+				<Label text="{i18n>CATEGORY}"/>
+				<Input value="{local>/product/CATEGORY}"/>
+				<Label text="{i18n>NAME}"/>
+				<Input value="{local>/product/NAME}"/>
+				<Label text="{i18n>DESCRIPTION}"/>
+				<Input value="{local>/product/DESCRIPTION}"/>
+				<Label text="Supplier Company Name"/>
+				<Input editable="false" value="{local>/product/ToSupplier/COMPANY_NAME}"/>
+				<Label text="Supplier City"/>
+				<Input editable="false" value="{local>/product/ToSupplier/CITY}"/>
+			</form:content>
+		</form:SimpleForm>
+	</Panel>
+</core:FragmentDefinition>
