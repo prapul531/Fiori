@@ -24,7 +24,7 @@
 		"sourceFolder": "webapp",
 		"targetFolder": "destination",
 		"excludedFolders": [],
-		"excludedFiles": [],
+		"excludedFiles": ["index.html"],
 		"lastBuildDateTime": ""
 
 	},
